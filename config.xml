@@ -19,5 +19,5 @@
     <plugin name="cordova-plugin-x-socialsharing" spec="5.4.0" />
 
     <icon src="icon.png"/>
-    <splash src="image.jpeg"
+    <splash src="image.jpeg">
 </widget>
