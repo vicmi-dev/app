@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reutilizando código</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@5.1.1/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@5.1.1/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@5.1.1/css/ionic.bundle.css" />
+
+    <script src="cordova.js"></script>
+    <script src="todo.js"></script>
+</head>
+
+<body onload="onLoad()">
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="dark">
+                <ion-title>Reutilizando código</ion-title>
+                <ion-buttons slot="primary">
+                    <ion-button onclick="deleteItem()">
+                        <ion-icon slot="icon-only" name="trash"></ion-icon>
+                    </ion-button>
+                    <ion-button onclick="toggleReorder()">
+                        <ion-icon slot="icon-only" name="reorder-four"></ion-icon>
+                    </ion-button>
+                    <ion-button onclick="addEditItem()">
+                        <ion-icon slot="icon-only" name="create">
+                    </ion-button>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-tabs>
+                <ion-tab tab="js">
+                    <ion-list lines="full">
+                        <ion-reorder-group></ion-reorder-group>
+                    </ion-list>
+                </ion-tab>
+                <ion-tab tab="html">
+                    <ion-list lines="full">
+                        <ion-reorder-group></ion-reorder-group>
+                    </ion-list>
+                </ion-tab>
+                <ion-tab tab="python">
+                    <ion-list lines="full">
+                        <ion-reorder-group></ion-reorder-group>
+                    </ion-list>
+                </ion-tab>
+                <ion-tab-bar slot="bottom" color="dark">
+                    <ion-tab-button tab="js">
+                        <ion-icon name="logo-javascript"></ion-icon>
+                    </ion-tab-button>
+                    <ion-tab-button tab="html">
+                        <ion-icon name="logo-html5"></ion-icon>
+                    </ion-tab-button>
+                    <ion-tab-button tab="python">
+                        <ion-icon name="logo-python"></ion-icon>
+                    </ion-tab-button>
+            </ion-tabs>
+        </ion-content>
+    </ion-app>
+</body>
+
+</html>
