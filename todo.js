@@ -75,7 +75,7 @@ function addEditItem(index = false) {
     modal.component.innerHTML = `
         <ion-header>
             <ion-toolbar>
-                <ion-title>Código - `+(index !== false ? 'Editar código' : 'Nuevo código')+`</ion-title>
+                <ion-title>ToDo - `+(index !== false ? 'Edit task' : 'New task')+`</ion-title>
                 <ion-buttons slot="primary">
                     <ion-button color="danger"><ion-icon slot="icon-only" name="close"></ion-icon></ion-button>
                     <ion-button color="primary"><ion-icon slot="icon-only" name="checkmark"></ion-icon></ion-button>
@@ -165,4 +165,12 @@ function deleteItem(index = false) {
 
     document.querySelector('ion-app').appendChild(alert);
     alert.present();
+}
+
+function share() {
+    let text = "";
+    getList().forEach((task, index) => {
+      text += (index+1) + ". " + task.text + " - " + task.date.slice(0,10) + "\n";
+    });
+    window.plugins.socialsharing.share(text);
 }
