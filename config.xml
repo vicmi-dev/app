@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.manuelvictoria.recoding"
     versionCode = "1"
-    version     = "0.0.1" >
+    version     = "0.0.2" >
     <name>Recoding</name>
     <description>
         App to recode
@@ -10,9 +11,9 @@
     <author href="https://manuvicmi.tk" email="info@manuelvictoria.com">
         Manuel Victoria
     </author>
-    <access origin="*" />
-    <allow-navigation href="*" />
-    <allow-intent href="*"/>
+  <access origin="*" />
+  <allow-navigation href="*" />
+  <allow-intent href="*" />
 
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-vibration" />
